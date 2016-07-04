@@ -1,0 +1,70 @@
+
+
+*  {
+	font-family: lato;
+}
+
+
+.topbanner{ 
+display: flex;
+justify-content: space-between;
+text-align: right;
+align-items: flex-end;
+text-transform: uppercase;
+}
+
+.topbanner h1 { 
+font-weight: lighter;
+ }
+
+.hero { 
+display: flex;
+justify-content: center;
+align-self: center;
+ }
+
+ /*need to add a media query or srcset and a cropped hero image so that the biggest image wont need to load on small devices*/
+
+.logo { 
+padding-left: 10px;
+ }
+
+ .studentname { 
+padding-right: 10px;
+  }
+
+.projects { 
+display: flex;
+justify-content: space-around;
+border: 2px solid lightcoral;
+flex-flow: row wrap;
+	}
+
+.projects h2 { 
+text-transform: uppercase;
+font-weight: normal;
+ }
+
+ .projects a {
+ 	font-size: small;
+
+ }
+
+.project { 
+display: inline;
+text-align: center;
+
+ }
+
+ /*.project2 { 
+display: inline;
+text-align: center;
+ }
+ .project3 { 
+display: inline;
+text-align: center;
+ }
+  
+  
+
+  /*border-radius:  -this is what you need to use to round out corners; 

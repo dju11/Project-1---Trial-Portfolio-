@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfolio Project</title>
+	<meta http-equiv="X-UA-Compatible" content= "IE Edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+	<!--add the fonts to be used--> 
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
+
+
+	<!-- add the bootstrap functionality as CSS + jQuery + JavaScript components via local files and/or CDN --> 
+	<!--CSS minified --> 
+	<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+	<!--javascript minified -->
+	<!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> -->
+	<!--jQuery minified -->
+	<!-- <script type="text/javascript" src-="bootstrap/js/jquery-2.2.3.min.js"</script> -->
+
+	<!-- add bootstrap functionality via CDN -->
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
+    <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  -->
+
+
+
+	<!-- add the local stylesheet --> 
+	<link rel="stylesheet" href="css/styles.css"> 
+
+</head>
+
+<body>
+<!-- the main container for the scaffold/layout-->
+<div class="maincontainer"> 
+
+<!-- add the top banner area with the udacity logo and the student's name -->
+	<div class="topbanner">
+		<div class="logo">
+			<img src="http://placehold.it/100x100" alt="udacitylogo"></img>
+		</div>
+		<div class="studentname">
+			<h1>Daniel Underhill</h1>
+			<h3>Front-End Ninja</h3>
+		</div>
+	</div>
+
+
+	<!-- line break separating the top banner from the main body content -->
+	<hr size="3px" color="grey" width= >
+
+	<!-- add the hero image for the main visual component of the page -->
+	<div class="hero"><img src="http://placehold.it/1140x350" alt="hero image"></div>
+
+<!-- title of the next section -->
+	<div class="sectionheading">
+		<h1>Featured Work</h1>
+	</div>
+
+	<!-- add the lower row of project examples with images representing each project which are linked to modals -->
+	<div class="projects">
+	
+		<div class="project 1">
+			<img src="http://placehold.it/200x200" alt="project 1">
+			<h2>Project 1</h2>
+			<a href="link1">Link 1</a>
+		</div>
+
+		<div class="project 2">
+			<img src="http://placehold.it/200x200" alt="project 2">
+			<h2>Project 2</h2>
+			<a href="link2">Link 2</a>
+		</div>
+
+		<div class="project 3">
+			<img src="http://placehold.it/200x200" alt="project 3">
+			<h2>Project 3</h2>
+			<a href="link3">Link 3</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+
+<!--  -EXPERIMENTING WITH SOUND FOR MODALS 
+<audio id="buzzer" src="buzzer.ogg" type="audio/ogg"></audio>    
+<input type="button" value="Start" id="start" />
+
+
+
+
+<!-- here is the code needed to implement the modal functions  -->
+
+
+<!-- 
+
+
+APPLY TO THE MODAL TARGETS ...
+<div class="row">
+          <div class="col-md-6 text-center">
+           <img class="img-responsive" src="http://placehold.it/555x300" data-target = "#myModal" data-toggle="modal"><!--set data target + toggle attributes here 
+
+
+TO CREATE EACH MODAL ITSELF...
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
+          </div>
+
+          <div class="modal-body">
+            <img class="img-responsive" src="http://placehold.it/555x300">
+            <p>This was my first project in this class. I learned a lot about HTML and CSS.</p>
+          </div>
+
+          <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+    </div>
+  </div>
+</div>
+          
