@@ -3,7 +3,10 @@
 *  {
 	font-family: lato;
 }
-
+/*
+.header_menu  {
+	display: none;
+}*/
 
 .topbanner{ 
 display: flex;
@@ -21,6 +24,7 @@ font-weight: lighter;
 display: flex;
 justify-content: center;
 align-self: center;
+
  }
 
  /*need to add a media query or srcset and a cropped hero image so that the biggest image wont need to load on small devices*/
@@ -29,7 +33,12 @@ align-self: center;
 padding-left: 10px;
  }
 
+
+
+
+
  .studentname { 
+
 padding-right: 10px;
   }
 
@@ -38,7 +47,9 @@ display: flex;
 justify-content: space-around;
 border: 2px solid lightcoral;
 flex-flow: row wrap;
-	}
+padding-top: 1.5rem;
+/*padding-bottom: 10px;
+*/	}
 
 .projects h2 { 
 text-transform: uppercase;
@@ -48,6 +59,7 @@ font-weight: normal;
  .projects a {
  	font-size: small;
 
+
  }
 
 .project { 
@@ -56,15 +68,72 @@ text-align: center;
 
  }
 
- /*.project2 { 
-display: inline;
-text-align: center;
- }
- .project3 { 
-display: inline;
-text-align: center;
- }
-  
-  
+.modal-body img{
+	margin: auto;
+}
 
-  /*border-radius:  -this is what you need to use to round out corners; 
+.modal-body p{ 
+text-align: center;
+}
+
+.hero { 
+width: 100%;
+height: auto;
+ }
+
+.nav { 
+
+ }
+
+ @media (max-width: 779px) {
+     .navbar {
+         margin-bottom:10px;
+ }
+
+
+@media screen and (max-width: 610px) {
+  .header__logo {
+    height: 48px;
+    margin-right: 0.5em;
+  }
+  .header__title {
+    margin-left: 0;
+    font-size: 2em;
+    vertical-align: bottom; 
+  }
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  .header__menu {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+  }
+  .header__menu svg {
+    width: 32px;
+    fill: #E0E0E0;
+  }
+}
+
+
+  /*border-radius:  -this is what you need to use to round out corners; }
+

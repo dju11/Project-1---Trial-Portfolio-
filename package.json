@@ -1,0 +1,27 @@
+{
+  "name": "project1_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dju11/Project-1---Trial-Portfolio-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dju11/Project-1---Trial-Portfolio-/issues"
+  },
+  "homepage": "https://github.com/dju11/Project-1---Trial-Portfolio-#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.0.1",
+    "imagemin-pngquant": "^5.0.0"
+  },
+  "dependencies": {
+    "imagemin-jpegtran": "^5.0.2"
+  }
+}

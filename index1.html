@@ -10,6 +10,8 @@
 	<!--add the fonts to be used--> 
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
 
+  <!-- add the local stylesheet --> 
+  <link rel="stylesheet" href="css/styles.css"> 
 
 	<!-- add the bootstrap functionality as CSS + jQuery + JavaScript components via local files and/or CDN --> 
 	<!--CSS minified --> 
@@ -22,64 +24,86 @@
 	<!-- add bootstrap functionality via CDN -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
-
-
-
-	<!-- add the local stylesheet --> 
-	<link rel="stylesheet" href="css/styles.css"> 
-
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 
 <body>
 <!-- the main container for the scaffold/layout-->
 <!-- <div class="maincontainer">  -->
 
+
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">UdacityOnlineResume</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Project 1</a></li>
+      <li><a href="#">Project 2</a></li> 
+      <li><a href="#">Project 3</a></li> 
+    </ul>
+    <a id="menu" class="header__menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox= "0 0 50 50">
+            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+          </svg>
+    </a>
+  </div>
+</nav>
+   
+
 <!-- add the top banner area with the udacity logo and the student's name -->
-	<div class="topbanner">
-		<div class="logo">
+
+	<header class="topbanner">
+		<picture class="logo">
 			<img src="http://placehold.it/100X100" alt="udacitylogo"></img>
-		</div>
+		</picture>
 		<div class="studentname">
 			<h1>Daniel Underhill</h1>
 			<h3>Front-End Ninja</h3>
 		</div>
-	</div>
+	</header>
 
 
 	<!-- line break separating the top banner from the main body content -->
 	<hr size="3px" color="grey" width= >
 
 	<!-- add the hero image for the main visual component of the page -->
-	<div class="hero"><img src="http://placehold.it/1140x350" alt="hero image"></div>
+	<picture class="hero"><img src="images/hero.jpg" alt="hero image"></picture>
 
 <!-- title of the next section -->
-	<div class="sectionheading">
+	<header class="sectionheading">
 		<h1>Featured Work</h1>
-	</div>
+	</header>
 
 	<!-- add the lower row of project examples with images representing each project which are linked to modals -->
-	<div class="projects">
+	<section class="projects">
 	
 		<div class="project 1">
-			<input type= "image" id="myImage 1" style= "height: 300px, width:300px;" class="img-responsive play" src="images/Hiking Hunger .jpg" alt="project 1" data-target= "#modal1" data-toggle="modal">
+			<input type= "image" id="myImage 1" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img1.jpg" alt="project 1" data-target= "#modal1" data-toggle="modal">
 			<h2>Project 1</h2>
-			<a href="link1">Link 1</a>
+			<a href="link 1">Link 1</a>
 		</div>
 
 		<div class="project 2">
-			<input type= "image" id="myImage 2" style= "height: 300px, width:300px;" class="img-responsive play" src="http://placehold.it/300x300" alt="project 2" data-target= "#modal2" data-toggle="modal">
+			<input type= "image" id="myImage 2" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img2.jpeg" alt="project 2" data-target= "#modal2" data-toggle="modal">
 			<h2>Project 2</h2>
-			<a href="link2">Link 2</a>
+			<a href="link 2">Link 2</a>
 		</div>
 
 		<div class="project 3">
-			<input type= "image" id="myImage 3" style= "height: 300px, width:300px;" class="img-responsive play" src="http://placehold.it/300x300" alt="project 3" data-target= "#modal3" data-toggle="modal">
+			<input type= "image" id="myImage 3" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img3.jpg" alt="project 3" data-target= "#modal3" data-toggle="modal">
 			<h2>Project 3</h2>
-			<a href="link3">Link 3</a>
+			<a href="link 3">Link 3</a>
 		</div>
 	</div>
-</div>
+</section>
 
 
 <!-- MODAL FUNCTIONALITY ADDED BELOW  -->
@@ -93,7 +117,7 @@
           </div>
 
           <div class="modal-body">
-            <img class="img-responsive" src="http://placehold.it/300x300">
+            <img class="img-responsive" src="images/img1.jpg">
             <p>This was my first project in this class. I learned a lot about HTML and CSS.</p>
           </div>
 
@@ -114,7 +138,7 @@
           </div>
 
           <div class="modal-body">
-            <img class="img-responsive" src="http://placehold.it/300x300">
+            <img class="img-responsive" src="images/img2.jpeg">
             <p>This was my second project in this class. I learned a lot about HTML and CSS.</p>
           </div>
 
@@ -135,7 +159,7 @@
           </div>
 
           <div class="modal-body">
-            <img class="img-responsive" src="http://placehold.it/300x300">
+            <img class="img-responsive" src="images/img3.jpg">
             <p>This was my third project in this class. I learned a lot about HTML and CSS.</p>
           </div>
 
@@ -146,13 +170,6 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
 
 
 <!-- </body> -->
@@ -166,7 +183,6 @@
 </audio>
 <!-- <button type="button" class="play">play</button> -->
 <!-- <button type="button" class="pause">pause</button> -->
-
 
 
 <!-- here is the JS for the audio -->
@@ -209,6 +225,25 @@ $(document).ready(function() {
  // document.getElementById('yourAudioTag').play();
 
 </script>
+
+
+<script>
+      /*
+       * Open the drawer when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drawer = document.querySelector('.nav');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+    </script>
 
 </body>
 </html>
