@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
 	<title>My Portfolio Project</title>
 	<meta http-equiv="X-UA-Compatible" content= "IE Edge"> 
@@ -10,77 +10,102 @@
 	<!--add the fonts to be used--> 
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
 
+  <!-- add link for icon fonts for social media -->
+  <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" >
 
-	<!-- add the bootstrap functionality as CSS + jQuery + JavaScript components via local files and/or CDN --> 
+  <!-- add the local stylesheet --> 
+  <link rel="stylesheet" href="css/styles.css"> 
+
+  <!-- add the bootstrap functionality as CSS + jQuery + JavaScript components via local files and/or CDN --> 
+
 	<!--CSS minified --> 
-	<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
-	<!--javascript minified -->
-	<!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> -->
+	<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">  -->
+	<!-- javascript minified  -->
+  <!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>  -->
 	<!--jQuery minified -->
-	 <!-- <script type="text/javascript" src-="bootstrap/js/jquery-2.2.3.min.js"</script> -->
+  <!-- <script type="text/javascript" src-="bootstrap/js/jquery-2.2.3.min.js"></script>  -->
 
 	<!-- add bootstrap functionality via CDN -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
-
-
-
-	<!-- add the local stylesheet --> 
-	<link rel="stylesheet" href="css/styles.css"> 
-
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
-
 <body>
-<!-- the main container for the scaffold/layout-->
-<!-- <div class="maincontainer">  -->
+<!-- Here is the responsive nav bar - it will collapse to hamburger glyphicon on smaller screens -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">  
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">UdacityResume</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#udacity">Home</a></li>
+        <li><a href="#myImage 1">Project 1</a></li>
+        <li><a href="#myImage 2">Project 2</a></li> 
+        <li><a href="#myImage 3">Project 3</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#modal4" data-target="#modal4" data-toggle="modal"><span class="glyphicon glyphicon-user"></span>Contact Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
 <!-- add the top banner area with the udacity logo and the student's name -->
-	<div class="topbanner">
-		<div class="logo">
-			<img src="http://placehold.it/100X100" alt="udacitylogo"></img>
+
+	<header class="topbanner">
+		<div id= "udacity" class="logo img-responsive">
+			<img src="images/U_360x360px.jpg" alt="udacitylogo">
 		</div>
 		<div class="studentname">
 			<h1>Daniel Underhill</h1>
 			<h3>Front-End Ninja</h3>
 		</div>
-	</div>
-
+	</header>
 
 	<!-- line break separating the top banner from the main body content -->
 	<hr size="3px" color="grey" width= >
 
 	<!-- add the hero image for the main visual component of the page -->
-	<div class="hero"><img src="http://placehold.it/1140x350" alt="hero image"></div>
+	<picture class="hero"><img id="heroimg" src="images/hero.jpg" alt="hero image"></picture>
 
 <!-- title of the next section -->
-	<div class="sectionheading">
+	<header class="sectionheading">
 		<h1>Featured Work</h1>
-	</div>
+	</header>
 
 	<!-- add the lower row of project examples with images representing each project which are linked to modals -->
-	<div class="projects">
+	<section class="projects">
 	
 		<div class="project 1">
-			<input type= "image" id="myImage 1" style= "height: 300px, width:300px;" class="img-responsive play" src="images/Hiking Hunger .jpg" alt="project 1" data-target= "#modal1" data-toggle="modal">
+			<input type= "image" id="myImage 1" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img4_small.jpg" alt="project 1" data-target= "#modal1" data-toggle="modal">
 			<h2>Project 1</h2>
-			<a href="link1">Link 1</a>
+			<a href="link 1">Link 1</a>
 		</div>
 
 		<div class="project 2">
-			<input type= "image" id="myImage 2" style= "height: 300px, width:300px;" class="img-responsive play" src="http://placehold.it/300x300" alt="project 2" data-target= "#modal2" data-toggle="modal">
+			<input type= "image" id="myImage 2" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img1_small.jpg" alt="project 2" data-target= "#modal2" data-toggle="modal">
 			<h2>Project 2</h2>
-			<a href="link2">Link 2</a>
+			<a href="link 2">Link 2</a>
 		</div>
 
 		<div class="project 3">
-			<input type= "image" id="myImage 3" style= "height: 300px, width:300px;" class="img-responsive play" src="http://placehold.it/300x300" alt="project 3" data-target= "#modal3" data-toggle="modal">
+			<input type= "image" id="myImage 3" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img2_small.jpeg" alt="project 3" data-target= "#modal3" data-toggle="modal">
 			<h2>Project 3</h2>
-			<a href="link3">Link 3</a>
+			<a href="link 3">Link 3</a>
 		</div>
 	</div>
-</div>
-
+</section>
 
 <!-- MODAL FUNCTIONALITY ADDED BELOW  -->
 
@@ -93,14 +118,13 @@
           </div>
 
           <div class="modal-body">
-            <img class="img-responsive" src="http://placehold.it/300x300">
+            <img class="img-responsive" src="images/img4.jpg">
             <p>This was my first project in this class. I learned a lot about HTML and CSS.</p>
           </div>
 
           <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
-
     </div>
   </div>
 </div>
@@ -114,7 +138,7 @@
           </div>
 
           <div class="modal-body">
-            <img class="img-responsive" src="http://placehold.it/300x300">
+            <img class="img-responsive" src="images/img1.jpg">
             <p>This was my second project in this class. I learned a lot about HTML and CSS.</p>
           </div>
 
@@ -135,7 +159,7 @@
           </div>
 
           <div class="modal-body">
-            <img class="img-responsive" src="http://placehold.it/300x300">
+            <img class="img-responsive" src="images/img2.jpeg">
             <p>This was my third project in this class. I learned a lot about HTML and CSS.</p>
           </div>
 
@@ -147,29 +171,54 @@
   </div>
 </div>
 
+<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Contact Me</h4>
+          </div>
+
+          <div class="modal-body">
+            <img class="img-responsive" src="" alt="no image here - sorry bub">
+            <p>You cant contact me because I'm not really a developer yet!</p>
+          </div>
+
+          <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+    </div>
+  </div>
+</div>
 
 
+<footer class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-4" id="red">Design/Code by Daniel Underhill
+    </div>
 
 
+    <div class="col-md-4 socialmedia" id="yellow">
+      <a href="#" class="zocial-twitter"></a>
+      <a href="#" class="zocial-facebook"></a>
+      <a href="#" class="zocial-googleplus"></a>
+      <a href="#" class="zocial-instagram"></a>
+    </div>
 
-
-
-
-<!-- </body> -->
-<!-- </html> -->
-
+    <div class="col-md-4" id="blue">2016</div>
+  </div>
+</footer>
 
 <!-- Here is the HTML for the audio -->
 <!-- NOTE - the actual images of the three projects were instantiated as "input" elements with type = image (as opposed to image elements) -->
+<!-- the audio clip added here -->
 <audio id="mysoundclip" preload="auto">
     <source src="http://soundbible.com/grab.php?id=1682&type=wav"></source>
 </audio>
-<!-- <button type="button" class="play">play</button> -->
-<!-- <button type="button" class="pause">pause</button> -->
 
-
-
-<!-- here is the JS for the audio -->
+<!-- here is the JS for the that plays the audio clip on click events-->
 <script>
 var audio = $("#mysoundclip")[0];
     console.log(audio);
@@ -180,33 +229,14 @@ $("button.pause").click(function() {
     audio.pause();
 });
 
-
 $(document).ready(function() { 
     $("").click(function() { 
         audio.play();
     });
 }); 
 
-
-</script>
-
-  <script> 
- // element.addEventListener('event', functionName [, Boolean]); 
-
- // e.g.
-
- // function checkUsername() { 
- 	// var el = document.getElementById("username");
- 	// el.addEventListener('click', checkUsernamef)
- // }
-
-
-
-
-// here is general audio play js 
-
-// so insert this into a click event listener  so it plays when you click the image
- // document.getElementById('yourAudioTag').play();
+// decrease the volume of the sound being played using J-Query and the volume property of the audio element
+$("audio").prop("volume", 0.2); 
 
 </script>
 
@@ -214,70 +244,3 @@ $(document).ready(function() {
 </html>
 
 
- <!-- -EXPERIMENTING WITH SOUND FOR MODALS  
-<audio id="buzzer" src="buzzer.ogg" type="audio/ogg"></audio>    
-<input type="button" value="Start" id="start" />
-
--->
-
-
-<!-- here is the code needed to implement the modal functions   -->
-
-<!-- 
-
-APPLY TO THE MODAL TARGETS ...
-<div class="row">
-          <div class="col-md-6 text-center">
-           <img class="img-responsive" src="http://placehold.it/555x300" data-target = "#myModal" data-toggle="modal">set data target + toggle attributes here 
-
-
-TO CREATE EACH MODAL ITSELF...
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
-          </div>
-
-          <div class="modal-body">
-            <img class="img-responsive" src="http://placehold.it/555x300">
-            <p>This was my first project in this class. I learned a lot about HTML and CSS.</p>
-          </div>
-
-          <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-
-    </div>
-  </div>
-</div>
-   -->
-
-
-   <!-- event listener syntax  -->
-  <!-- <script> 
- element.addEventListener('event', functionName [, Boolean]); 
-
- // e.g.
-
- function checkUsername() { 
- 	var el = document.getElementById("username");
- 	el.addEventListener('click', checkUsernamef)
- }
-
-$(document).ready(function() { 
-    $("modal-body").click(function() { 
-        $("#mysoundclip").play();
-    });
-}); 
-
-
-
-// here is general audio play js 
-
-// so insert this into a click event listener  so it plays when you click the image
- document.getElementById('yourAudioTag').play();
-
-</script> -->

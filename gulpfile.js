@@ -27,24 +27,12 @@ var gulp = require('gulp');
 // Image Optimization --------------------------------------------------------------------------------
 // var imagemin = require('gulp-imagemin'); 
 
+
 // gulp.task('imagemin', function(){
-// 	return gulp.src('/images/Hiking%20Hunger%20.jpg')
-// 	.pipe(imagemin({
-// 		//setting interlaced to true
-// 		interlaced: true
-// 		progressive: true
-// 	}))
-// 	.pipe(gulp.dest('/dist'))
-
+//   return gulp.src('/images/**/*.jpg')
+//   .pipe(imagemin())
+//   .pipe(gulp.dest('/dist'));
 // });
-
-
-
-gulp.task('imagemin', function(){
-  return gulp.src('/images/**/*.jpg')
-  .pipe(imagemin())
-  .pipe(gulp.dest('/dist'));
-});
 
 
 
@@ -70,17 +58,56 @@ gulp.task('imagemin', function(){
 
 
 
-// THE JPEG TRANS PLUGIN FUNCTION HERE -------------------------------------------------------
 
- var imagemin = require('gulp-imagemin');
-const imageminJpegtran = require('imagemin-jpegtran');
+var imagemin = require('gulp-imagemin');
 
-imagemin(['images/*.jpg'], 'Project 1 - Trial Portfolio/images', {use: [imageminJpegtran()]}).then(() => {
-    console.log('Images optimized');
+// CODE TO USE AUTOPREFIXER ON THE CSS SINCE FLEXBOX NOT WORKING IN SAFARI 
+
+var autoprefixer = require("gulp-autoprefixer"); 
+var sass = require('gulp-sass');
+
+
+
+
+
+gulp.task('styles', function() {
+
+	return gulp.src('sass/**/*.scss')
+		.pipe(sass().on('error', sass.logError))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions']
+		}))
+		.pipe(gulp.dest('./dist'))
+}); 
+
+
+gulp.task('imagemin', function(){
+	return gulp.src('images/**/*.+(png|jpg|jpeg|gif|svg)')
+	.pipe(imagemin({
+		//setting interlaced to true
+		// interlaced: true
+		progressive: true
+	}))
+	.pipe(gulp.dest('./dist'))
+
 });
 
 
-
+gulp.task('images', function(){
+  return gulp.src('images/**/*.+(png|jpg|jpeg|gif|svg)')
+  .pipe(imagemin({
+      // Setting interlaced to true
+      interlaced: true
+    }))
+  .pipe(gulp.dest('dist/images'))
+});
+// gulp.task('runprefixer', function(){
+// 	return gulp.src('/css/**/*.css')
+// 		.pipe(autoprefixer({
+// 			browsers: ['last 2 versions']
+// 		}))
+// 		.pipe(gulp.dest('/dist'));
+// });
 
 
 

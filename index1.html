@@ -31,51 +31,49 @@
   </script>
   <script src="js/picturefill.min.js" async></script>
 </head>
-
 <body>
-<!-- the main container for the scaffold/layout-->
-<!-- <div class="maincontainer">  -->
-
-
-
+<!-- Here is the responsive nav bar - it will collapse to hamburger glyphicon on smaller screens -->
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+  <div class="container-fluid">  
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">UdacityOnlineResume</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">UdacityResume</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Project 1</a></li>
-      <li><a href="#">Project 2</a></li> 
-      <li><a href="#">Project 3</a></li> 
-    </ul>
-    <a id="menu" class="header__menu">
-          <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox= "0 0 50 50">
-            <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
-          </svg>
-    </a>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#udacity">Home</a></li>
+        <li><a href="#myImage 1">Project 1</a></li>
+        <li><a href="#myImage 2">Project 2</a></li> 
+        <li><a href="#myImage 3">Project 3</a></li> 
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#modal4" data-target="#modal4" data-toggle="modal"><span class="glyphicon glyphicon-user"></span>Contact Me</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
-   
 
 <!-- add the top banner area with the udacity logo and the student's name -->
 
 	<header class="topbanner">
-		<picture class="logo">
-			<img src="http://placehold.it/100X100" alt="udacitylogo"></img>
-		</picture>
+		<div id= "udacity" class="logo img-responsive">
+			<img src="images/U_360x360px.jpg" alt="udacitylogo"></img>
+		</div>
 		<div class="studentname">
 			<h1>Daniel Underhill</h1>
 			<h3>Front-End Ninja</h3>
 		</div>
 	</header>
 
-
 	<!-- line break separating the top banner from the main body content -->
 	<hr size="3px" color="grey" width= >
 
 	<!-- add the hero image for the main visual component of the page -->
-	<picture class="hero"><img src="images/hero.jpg" alt="hero image"></picture>
+	<picture class="hero"><img id="heroimg" src="images/hero.jpg" alt="hero image"></picture>
 
 <!-- title of the next section -->
 	<header class="sectionheading">
@@ -86,25 +84,24 @@
 	<section class="projects">
 	
 		<div class="project 1">
-			<input type= "image" id="myImage 1" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img1.jpg" alt="project 1" data-target= "#modal1" data-toggle="modal">
+			<input type= "image" id="myImage 1" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img4_small.jpg" alt="project 1" data-target= "#modal1" data-toggle="modal">
 			<h2>Project 1</h2>
 			<a href="link 1">Link 1</a>
 		</div>
 
 		<div class="project 2">
-			<input type= "image" id="myImage 2" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img2.jpeg" alt="project 2" data-target= "#modal2" data-toggle="modal">
+			<input type= "image" id="myImage 2" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img1_small.jpg" alt="project 2" data-target= "#modal2" data-toggle="modal">
 			<h2>Project 2</h2>
 			<a href="link 2">Link 2</a>
 		</div>
 
 		<div class="project 3">
-			<input type= "image" id="myImage 3" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img3.jpg" alt="project 3" data-target= "#modal3" data-toggle="modal">
+			<input type= "image" id="myImage 3" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img2_small.jpeg" alt="project 3" data-target= "#modal3" data-toggle="modal">
 			<h2>Project 3</h2>
 			<a href="link 3">Link 3</a>
 		</div>
 	</div>
 </section>
-
 
 <!-- MODAL FUNCTIONALITY ADDED BELOW  -->
 
@@ -117,14 +114,13 @@
           </div>
 
           <div class="modal-body">
-            <img class="img-responsive" src="images/img1.jpg">
+            <img class="img-responsive" src="images/img4.jpg">
             <p>This was my first project in this class. I learned a lot about HTML and CSS.</p>
           </div>
 
           <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
-
     </div>
   </div>
 </div>
@@ -138,7 +134,7 @@
           </div>
 
           <div class="modal-body">
-            <img class="img-responsive" src="images/img2.jpeg">
+            <img class="img-responsive" src="images/img1.jpg">
             <p>This was my second project in this class. I learned a lot about HTML and CSS.</p>
           </div>
 
@@ -159,7 +155,7 @@
           </div>
 
           <div class="modal-body">
-            <img class="img-responsive" src="images/img3.jpg">
+            <img class="img-responsive" src="images/img2.jpeg">
             <p>This was my third project in this class. I learned a lot about HTML and CSS.</p>
           </div>
 
@@ -171,21 +167,35 @@
   </div>
 </div>
 
+<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
 
-<!-- </body> -->
-<!-- </html> -->
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Contact Me</h4>
+          </div>
 
+          <div class="modal-body">
+            <img class="img-responsive" src="" alt="no image here - sorry bub">
+            <p>You cant contact me because I'm not really a developer yet!</p>
+          </div>
+
+          <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+    </div>
+  </div>
+</div>
 
 <!-- Here is the HTML for the audio -->
 <!-- NOTE - the actual images of the three projects were instantiated as "input" elements with type = image (as opposed to image elements) -->
+<!-- the audio clip added here -->
 <audio id="mysoundclip" preload="auto">
     <source src="http://soundbible.com/grab.php?id=1682&type=wav"></source>
 </audio>
-<!-- <button type="button" class="play">play</button> -->
-<!-- <button type="button" class="pause">pause</button> -->
 
-
-<!-- here is the JS for the audio -->
+<!-- here is the JS for the audio to play with click events-->
 <script>
 var audio = $("#mysoundclip")[0];
     console.log(audio);
@@ -203,29 +213,14 @@ $(document).ready(function() {
     });
 }); 
 
+// decrease the volume of the sound being played using J-Query and the volume property of the audio element
 
+$("audio").prop("volume", 0.2); 
+
+// Note the non-jQuery code below will also work to lower the vol
+// var sound = document.getElementById('mysoundclip');
+// sound.volume = 0.2;
 </script>
-
-  <script> 
- // element.addEventListener('event', functionName [, Boolean]); 
-
- // e.g.
-
- // function checkUsername() { 
- 	// var el = document.getElementById("username");
- 	// el.addEventListener('click', checkUsernamef)
- // }
-
-
-
-
-// here is general audio play js 
-
-// so insert this into a click event listener  so it plays when you click the image
- // document.getElementById('yourAudioTag').play();
-
-</script>
-
 
 <script>
       /*
@@ -242,77 +237,8 @@ $(document).ready(function() {
       main.addEventListener('click', function() {
         drawer.classList.remove('open');
       });
-
-    </script>
-
+</script>
 </body>
 </html>
 
 
- <!-- -EXPERIMENTING WITH SOUND FOR MODALS  
-<audio id="buzzer" src="buzzer.ogg" type="audio/ogg"></audio>    
-<input type="button" value="Start" id="start" />
-
--->
-
-
-<!-- here is the code needed to implement the modal functions   -->
-
-<!-- 
-
-APPLY TO THE MODAL TARGETS ...
-<div class="row">
-          <div class="col-md-6 text-center">
-           <img class="img-responsive" src="http://placehold.it/555x300" data-target = "#myModal" data-toggle="modal">set data target + toggle attributes here 
-
-
-TO CREATE EACH MODAL ITSELF...
-
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> 
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
-          </div>
-
-          <div class="modal-body">
-            <img class="img-responsive" src="http://placehold.it/555x300">
-            <p>This was my first project in this class. I learned a lot about HTML and CSS.</p>
-          </div>
-
-          <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-
-    </div>
-  </div>
-</div>
-   -->
-
-
-   <!-- event listener syntax  -->
-  <!-- <script> 
- element.addEventListener('event', functionName [, Boolean]); 
-
- // e.g.
-
- function checkUsername() { 
- 	var el = document.getElementById("username");
- 	el.addEventListener('click', checkUsernamef)
- }
-
-$(document).ready(function() { 
-    $("modal-body").click(function() { 
-        $("#mysoundclip").play();
-    });
-}); 
-
-
-
-// here is general audio play js 
-
-// so insert this into a click event listener  so it plays when you click the image
- document.getElementById('yourAudioTag').play();
-
-</script> -->

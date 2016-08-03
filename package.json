@@ -1,10 +1,21 @@
 {
-  "name": "project1_portfolio",
+  "name": "portfolioproject",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-sass": "^2.3.2",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-pngquant": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
   "scripts": {
-    "test": "tests"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,13 +26,5 @@
   "bugs": {
     "url": "https://github.com/dju11/Project-1---Trial-Portfolio-/issues"
   },
-  "homepage": "https://github.com/dju11/Project-1---Trial-Portfolio-#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-imagemin": "^3.0.1",
-    "imagemin-pngquant": "^5.0.0"
-  },
-  "dependencies": {
-    "imagemin-jpegtran": "^5.0.2"
-  }
+  "homepage": "https://github.com/dju11/Project-1---Trial-Portfolio-#readme"
 }
