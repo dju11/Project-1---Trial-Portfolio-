@@ -22,19 +22,10 @@ footer a:hover {
 }
 
 .topbanner {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     text-align: right;
-    -webkit-box-align: end;
-    -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    align-items: flex-end;
     text-transform: uppercase;
 }
 
@@ -43,17 +34,9 @@ footer a:hover {
 }
 
 .hero {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-align-self: center;
-        -ms-flex-item-align: center;
-            align-self: center;
+    justify-content: center;
+    align-self: center;
 }
 
 picture img {
@@ -88,17 +71,9 @@ picture img {
 }
 
 .projects {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    padding-top: 24px;
+    justify-content: space-around;
+    flex-flow: row wrap;
     padding-top: 1.5rem;
 }
 
@@ -141,15 +116,9 @@ picture img {
  }
 }*/
 .row {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     background-color: grey;
     text-align: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     height: 100px;
 }
