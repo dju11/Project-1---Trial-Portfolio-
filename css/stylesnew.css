@@ -2,7 +2,19 @@
 
 * {
     font-family: lato;
+    border: 1px solid red;
+
 }
+
+/*#udacity { 
+    border: 1px solid red;
+    background-color: red;
+     }
+
+.studentname { 
+    border: 1px solid red;
+   background-color: red;
+     }*/
 
 /* zocial */
 [class*="zocial-"]:before {
@@ -21,11 +33,18 @@ footer a:hover {
     text-decoration: underline;
 }
 
+
+.logo img {
+/*    margin-left: 10px;
+    padding-left: 10px;*/
+    width: 100px;
+    height: 100px;
+}
+
+
 .topbanner {
-    display: flex;
-    justify-content: space-between;
-    text-align: right;
-    align-items: flex-end;
+  
+    /*text-align: right;*/
     text-transform: uppercase;
 }
 
@@ -34,9 +53,7 @@ footer a:hover {
 }
 
 .hero {
-    display: flex;
-    justify-content: center;
-    align-self: center;
+
 }
 
 picture img {
@@ -44,22 +61,15 @@ picture img {
 }
 
 .projects {
-    margin-bottom: 5%;
-}
-
-.logo img {
-    margin-left: 10px;
-    padding-left: 10px;
-    width: 100px;
-    height: 100px;
+    margin-bottom: 1%;
 }
 
 .studentname {
-    margin-right: 10px;
+/*    margin-right: 10px;*/
 }
 
 .header_menu {
-    text-align: right;
+  /*  text-align: right;*/
 }
 
 .studentname {
@@ -71,9 +81,7 @@ picture img {
 }
 
 .projects {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
+   
     padding-top: 1.5rem;
 }
 
@@ -88,7 +96,7 @@ picture img {
 
 .project {
     display: inline;
-    text-align: center;
+    margin: auto;
     margin-top: 10px;
 }
 
@@ -101,24 +109,54 @@ picture img {
 }
 
 .modal-body p {
-    text-align: center;
+   /* text-align: center;*/
 }
 
 .hero {
     width: 100%;
     height: auto;
 }
-
-/* @media (max-width: 779px) {
+/*
+@media (max-width: 779px) {
      .navbar {
          margin-bottom:10px;
 
  }
 }*/
-.row {
-    display: flex;
+footer {
+
     background-color: grey;
-    text-align: center;
-    align-items: center;
-    height: 100px;
+
 }
+
+#row6{ 
+overflow: hidden; 
+height: 10rem;
+}
+
+#red {
+    position: relative;
+    background: grey;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+#red h5 { 
+position: relative;
+transform: translateY(50%);
+ }
+
+#yellow {
+    background: tan;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+#blue {
+    background: grey;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+/*this still does not work yet because the third div dissapears with small viewport 
+*/

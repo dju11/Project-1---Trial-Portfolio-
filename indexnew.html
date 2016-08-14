@@ -1,28 +1,29 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="eng">
 <head>
 	<title>My Portfolio Project</title>
 	<meta http-equiv="X-UA-Compatible" content= "IE Edge"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-
 	<!--add the fonts to be used--> 
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300' rel='stylesheet' type='text/css'>
 
-  <!-- add the local stylesheet --> 
-  <link rel="stylesheet" href="css/styles.css"> 
+  <!-- add link for icon fonts for social media -->
+  <link rel="stylesheet" href="http://weloveiconfonts.com/api/?family=zocial" >
+  <!-- add the bootstrap functionality as CSS + jQuery + JavaScript components via local files and/or CDN --> 
 
-	<!-- add the bootstrap functionality as CSS + jQuery + JavaScript components via local files and/or CDN --> 
 	<!--CSS minified --> 
-	<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
-	<!--javascript minified -->
-	<!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> -->
+	<!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">  -->
+	<!-- javascript minified  -->
+  <!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>  -->
 	<!--jQuery minified -->
-	 <!-- <script type="text/javascript" src-="bootstrap/js/jquery-2.2.3.min.js"</script> -->
+  <!-- <script type="text/javascript" src-="bootstrap/js/jquery-2.2.3.min.js"></script>  -->
 
 	<!-- add bootstrap functionality via CDN -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/stylesnew.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
   <script>
@@ -57,51 +58,89 @@
   </div>
 </nav>
 
-<!-- add the top banner area with the udacity logo and the student's name -->
 
-	<header class="topbanner">
-		<div id= "udacity" class="logo img-responsive">
-			<img src="images/U_360x360px.jpg" alt="udacitylogo"></img>
+<!-- THE MAIN CONTAINER STARTS HERE ??? -->
+
+<div class="container-fluid">
+<!-- add the top banner area with the udacity logo and the student's name -->
+<!-- <div class="row" id="header_row"> -->
+	<header class="row topbanner" id="row1">
+		<div id= "udacity" class="col-md-6 logo img-responsive">
+			<img src="images/U_360x360px.jpg" alt="udacitylogo">
 		</div>
-		<div class="studentname">
+		<div class="col-md-6 text-right studentname">
 			<h1>Daniel Underhill</h1>
 			<h3>Front-End Ninja</h3>
 		</div>
 	</header>
+<!-- </div> -->
 
 	<!-- line break separating the top banner from the main body content -->
-	<hr size="3px" color="grey" width= >
+  <div class="row" id="row2">
+    <div class="col-md-12">
+      <hr size="20">
+    </div>
+  </div>
 
 	<!-- add the hero image for the main visual component of the page -->
-	<picture class="hero"><img id="heroimg" src="images/hero.jpg" alt="hero image"></picture>
+  <div class="row" id="row3">
+    <div class="col-md-12 text-center">
+	    <picture class="hero">
+        <img id="heroimg" src="images/hero.jpg" alt="hero image">
+      </picture>
+    </div>
+  </div>
+
 
 <!-- title of the next section -->
-	<header class="sectionheading">
-		<h1>Featured Work</h1>
-	</header>
+  <div class="row" id="row4"> 
+    <div class="col-md-12"> 
+  	 <header class="sectionheading text-muted">
+  		  <h1>Featured Work</h1>
+  	 </header>
+    </div>
+  </div>
 
 	<!-- add the lower row of project examples with images representing each project which are linked to modals -->
-	<section class="projects">
-	
-		<div class="project 1">
-			<input type= "image" id="myImage 1" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img4_small.jpg" alt="project 1" data-target= "#modal1" data-toggle="modal">
+	<section class="row projects text-center" id="row5">
+	 <div class="col-md-4 project 1" id="project_1">	
+      <input type= "image" id="myImage 1" style= "height: 300px, width:300px;" class="center-block img-responsive play" src="images/img4_small.jpg" alt="project 1" data-target= "#modal1" data-toggle="modal">
 			<h2>Project 1</h2>
 			<a href="link 1">Link 1</a>
 		</div>
 
-		<div class="project 2">
-			<input type= "image" id="myImage 2" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img1_small.jpg" alt="project 2" data-target= "#modal2" data-toggle="modal">
+		<div class="col-md-4 project 2" id="project_2">
+			<input type= "image" id="myImage 2" style= "height: 300px, width:300px;" class="center-block img-responsive play" src="images/img1_small.jpg" alt="project 2" data-target= "#modal2" data-toggle="modal">
 			<h2>Project 2</h2>
 			<a href="link 2">Link 2</a>
 		</div>
 
-		<div class="project 3">
-			<input type= "image" id="myImage 3" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img2_small.jpeg" alt="project 3" data-target= "#modal3" data-toggle="modal">
+		<div class="col-md-4 project 3" id="project_3">
+			<input type= "image" id="myImage 3" style= "height: 300px, width:300px;" class="center-block img-responsive play" src="images/img2_small.jpeg" alt="project 3" data-target= "#modal3" data-toggle="modal">
 			<h2>Project 3</h2>
 			<a href="link 3">Link 3</a>
 		</div>
-	</div>
-</section>
+	</section>
+
+<!-- FOOTER SECTION STARTS HERE -->
+  <footer class="row text-center" id="row6">
+
+    <div class="col-md-4" id="red">
+      <h5>Design/Code by Daniel Underhill</h5>
+    </div>
+
+
+    <div class="col-md-4 socialmedia" id="yellow">
+      <a href="#" class="zocial-twitter"></a>
+      <a href="#" class="zocial-facebook"></a>
+      <a href="#" class="zocial-googleplus"></a>
+      <a href="#" class="zocial-instagram"></a>
+    </div>
+ 
+    <div class="col-md-4" id="blue">
+      <h5>2016</h5>
+    </div>  
+  </footer>
 
 <!-- MODAL FUNCTIONALITY ADDED BELOW  -->
 
@@ -187,6 +226,13 @@
     </div>
   </div>
 </div>
+<!-- close the main bootstrap container here  -->
+</div>
+
+<!-- HERE IS THE FOOTER SECTION OF THE PAGE  -->
+
+
+
 
 <!-- Here is the HTML for the audio -->
 <!-- NOTE - the actual images of the three projects were instantiated as "input" elements with type = image (as opposed to image elements) -->
@@ -195,7 +241,7 @@
     <source src="http://soundbible.com/grab.php?id=1682&type=wav"></source>
 </audio>
 
-<!-- here is the JS for the audio to play with click events-->
+<!-- here is the JS for the that plays the audio clip on click events-->
 <script>
 var audio = $("#mysoundclip")[0];
     console.log(audio);
@@ -206,7 +252,6 @@ $("button.pause").click(function() {
     audio.pause();
 });
 
-
 $(document).ready(function() { 
     $("").click(function() { 
         audio.play();
@@ -214,30 +259,10 @@ $(document).ready(function() {
 }); 
 
 // decrease the volume of the sound being played using J-Query and the volume property of the audio element
-
 $("audio").prop("volume", 0.2); 
 
-// Note the non-jQuery code below will also work to lower the vol
-// var sound = document.getElementById('mysoundclip');
-// sound.volume = 0.2;
 </script>
 
-<script>
-      /*
-       * Open the drawer when the menu ison is clicked.
-       */
-      var menu = document.querySelector('#menu');
-      var main = document.querySelector('main');
-      var drawer = document.querySelector('.nav');
-
-      menu.addEventListener('click', function(e) {
-        drawer.classList.toggle('open');
-        e.stopPropagation();
-      });
-      main.addEventListener('click', function() {
-        drawer.classList.remove('open');
-      });
-</script>
 </body>
 </html>
 
