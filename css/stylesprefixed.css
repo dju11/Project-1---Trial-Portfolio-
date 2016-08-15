@@ -1,0 +1,125 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+* {
+  font-family: lato; }
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  font-size: 2.5em;
+  text-shadow: 3px 3px 3px grey;
+  margin: 10px; }
+
+footer a:hover {
+  color: lightcoral; }
+
+.project:hover {
+  color: lightcoral;
+  text-decoration: underline; }
+
+.topbanner {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: justify;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          justify-content: space-between;
+  text-align: right;
+  -ms-flex-align: end;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          align-items: flex-end;
+  text-transform: uppercase; }
+
+.topbanner h1 {
+  font-weight: lighter; }
+
+.hero {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -webkit-align-self: center;
+          align-self: center; }
+
+picture img {
+  box-shadow: 5px 5px 5px grey; }
+
+.projects {
+  margin-bottom: 5%; }
+
+.logo img {
+  margin-left: 10px;
+  padding-left: 10px;
+  width: 100px;
+  height: 100px; }
+
+.studentname {
+  margin-right: 10px; }
+
+.header_menu {
+  text-align: right; }
+
+.studentname {
+  padding-right: 10px; }
+
+.sectionheading {
+  margin-left: 10px; }
+
+.projects {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: distribute;
+      -webkit-justify-content: space-around;
+          justify-content: space-around;
+  -ms-flex-flow: row wrap;
+      -webkit-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding-top: 24px;
+  padding-top: 1.5rem; }
+
+.projects h2 {
+  text-transform: uppercase;
+  font-weight: normal; }
+
+.projects a {
+  font-size: small; }
+
+.project {
+  display: inline;
+  text-align: center;
+  margin-top: 10px; }
+
+.project input {
+  box-shadow: 0 0 20px grey; }
+
+.modal-body img {
+  margin: auto; }
+
+.modal-body p {
+  text-align: center; }
+
+.hero {
+  width: 100%;
+  height: auto; }
+
+.row {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  background-color: grey;
+  text-align: center;
+  -ms-flex-align: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          align-items: center;
+  height: 100px; }
