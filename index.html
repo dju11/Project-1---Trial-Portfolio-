@@ -30,7 +30,9 @@
   </script>
   <script src="js/picturefill.min.js" async></script>
 </head>
+
 <body>
+<div class="container-fluid">
 <!-- Here is the responsive nav bar - it will collapse to hamburger glyphicon on smaller screens -->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">  
@@ -68,33 +70,37 @@
 </header>
 
 	<!-- line break separating the top banner from the main body content -->
-<hr size="3px" color="grey">
+<hr>
 
 	<!-- add the hero image for the main visual component of the page -->
-<picture class="hero img-responsive"><img id="heroimg" src="images/hero.jpg" alt="hero image"></picture>
+
+  <!-- ADD A SECOND PICTURE OPTION HERE !!!! 
+  FOR WHEN THE SCREEN GETS REALLY SMALL AND 
+  DISTORTS THE IMAGE -->
+<picture class="hero"><img class="img-responsive" id="heroimg" src="images/hero.jpg" alt="hero image"></picture>
 
 <!-- title of the next section -->
-<header class="sectionheading">
+<header class="sectionheading text-muted">
 		<h1>Featured Work</h1>
 </header>
 
 	<!-- add the lower row of project examples with images representing each project which are linked to modals -->
 <section class="projects">
 	
-		<div class="project 1">
-			<input type= "image" id="myImage 1" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img4_small.jpg" alt="project 1" data-target= "#modal1" data-toggle="modal">
+		<div class="project project_1">
+			<input type= "image" id="myImage 1" class="img-responsive play" src="images/img4_small.jpg" alt="project 1" data-target= "#modal1" data-toggle="modal">
 			<h2>Project 1</h2>
 			<a href="link 1">Link 1</a>
 		</div>
 
-		<div class="project 2">
-			<input type= "image" id="myImage 2" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img1_small.jpg" alt="project 2" data-target= "#modal2" data-toggle="modal">
+		<div class="project project_2">
+			<input type= "image" id="myImage 2" class="img-responsive play" src="images/img1_small.jpg" alt="project 2" data-target= "#modal2" data-toggle="modal">
 			<h2>Project 2</h2>
 			<a href="link 2">Link 2</a>
 		</div>
 
-		<div class="project 3">
-			<input type= "image" id="myImage 3" style= "height: 300px, width:300px;" class="img-responsive play" src="images/img2_small.jpeg" alt="project 3" data-target= "#modal3" data-toggle="modal">
+		<div class="project project_3">
+			<input type= "image" id="myImage 3" class="img-responsive play" src="images/img2_small.jpeg" alt="project 3" data-target= "#modal3" data-toggle="modal">
 			<h2>Project 3</h2>
 			<a href="link 3">Link 3</a>
 		</div>
@@ -185,15 +191,15 @@
 
 <footer class="container-fluid">
   <div class="row">
-    <div class="col-md-4" id="red">Design/Code by Daniel Underhill
+    <div class="col-sm-12 col-md-4" id="red">Design/Code by Daniel Underhill
     </div>
-    <div class="col-md-4 socialmedia" id="yellow">
+    <div class="col-sm-12 col-md-4 socialmedia" id="yellow">
       <a href="#" class="zocial-twitter"></a>
       <a href="#" class="zocial-facebook"></a>
       <a href="#" class="zocial-googleplus"></a>
       <a href="#" class="zocial-instagram"></a>
     </div>
-    <div class="col-md-4" id="blue">2016</div>
+    <div class="col-sm-12 col-md-4" id="blue">2016</div>
   </div>
 </footer>
 
@@ -224,7 +230,14 @@ $(document).ready(function() {
 $("audio").prop("volume", 0.2); 
 
 </script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+<script src="js/picturefill.min.js" async></script>
+</div>
 </body>
 </html>
 

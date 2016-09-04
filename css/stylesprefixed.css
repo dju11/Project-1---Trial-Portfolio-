@@ -99,6 +99,8 @@ picture img {
   margin-top: 10px; }
 
 .project input {
+  height: 200px; 
+  width:300px;
   box-shadow: 0 0 20px grey; }
 
 .modal-body img {
@@ -123,3 +125,4 @@ picture img {
       -webkit-align-items: center;
           align-items: center;
   height: 100px; }
+
